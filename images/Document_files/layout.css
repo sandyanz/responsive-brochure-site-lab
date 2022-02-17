@@ -1,0 +1,88 @@
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.3fr 1.5fr 0.5fr;
+    grid-template-areas:"nav nav nav" 
+                        "main main main"
+                        "content1 content2 content3"
+                        "footer footer footer";
+    grid-gap: 0.2rem;                    
+}
+@media only screen and (max-width: 1000px){
+    .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+                        "nav"
+                        "main"
+                        "content1"
+                        "content2"
+                        "content3"
+                        "footer";
+    }
+}
+
+header {
+    grid-area: header;
+    background-color: cadetblue;
+    padding-top: 5px;
+    border-radius: 5px;
+
+}
+header h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+nav {
+    grid-area: nav;
+    background-color: lightskyblue;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+
+main {
+    grid-area: main;
+    background-color: lightslategray;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+
+#content1 {
+    grid-area: content1;
+    background-color: lightsteelblue;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+
+#content2 {
+    grid-area: content2;
+    background-color: lightyellow;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+
+#content3 {
+    grid-area: content3;
+    background-color: lime;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: limegreen;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+article p {
+    column-count: 1; /* This is the default so we don't really need to specify */
+  }
+  
+  @media only screen and (min-width: 480px) {
+    article p {
+      column-count: 2;  
+    }
+  }
